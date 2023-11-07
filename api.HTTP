@@ -1,0 +1,37 @@
+### get action
+GET http://localhost:3000/posts
+
+
+### get by id
+GET http://localhost:3000/posts/654168862921fa59c16a5d80
+
+### POST new User to de database
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "writerId": "65406a99306b78601097bda1",
+  "title": "erno",
+  "content": "### HOLA \n esto es un post en md",
+  "tags": ["estilo de vida", "viajes", "hoteles"]
+}
+
+### actualizar
+PATCH http://localhost:3000/posts/6546ca037eae3f32f7cc9009
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NDk4N2M1ZWNlZTVjZTc5YzllM2Q2YSIsImlhdCI6MTY5OTMxNzcwMSwiZXhwIjoxNjk5NDA0MTAxfQ.Pk9W4DEwLL8vSd46TLiuV3Bt9z-ZqZPrM6AJQotos-s
+
+{
+  "title": "Los hoteles que debes visitar una vez"
+}
+
+
+### get users action
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{
+  "name": "pepina",
+  "email": "pepina@gmail.com",
+  "password": "12345678"
+}
