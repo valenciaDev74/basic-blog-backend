@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const uri = process.env.MONGO_ATLAS_CONNECT_STRING
+const uri = 'mongodb+srv://' + process.env.MONGO_ATLAS_CONNECT_STRING
 
 const client = new MongoClient(uri, {
   serverApi: {

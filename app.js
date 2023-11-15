@@ -2,7 +2,6 @@ import express from 'express'
 import { corsMiddleware } from './middlewares/cors.js'
 import { postsRouter } from './routes/posts.js'
 import { usersRouter } from './routes/users.js'
-// import cors from 'cors'
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -12,7 +11,6 @@ app.use(express.json())
 app.disable('x-powered-by')
 
 app.use(corsMiddleware())
-// app.use(cors('*'))
 
 const port = process.env.PORT || 3000
 
