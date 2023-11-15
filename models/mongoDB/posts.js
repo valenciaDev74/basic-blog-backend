@@ -1,5 +1,8 @@
 import { MongoClient, ObjectId, ServerApiVersion } from 'mongodb'
-const uri = 'mongodb+srv://Admin:YoNJKLhJ7XwAYmLt@blog-cluster.fkprqyt.mongodb.net/?retryWrites=true&w=majority'
+import dotenv from 'dotenv'
+dotenv.config()
+
+const uri = process.env.MONGO_ATLAS_CONNECT_STRING
 
 const client = new MongoClient(uri, {
   serverApi: {
